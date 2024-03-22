@@ -1,0 +1,15 @@
+.pdf-viewer-container {
+    display: flex;
+  }
+  
+  .pdf-container,
+  .comments-container {
+    width: 100%;
+  }
+  
+  .pdf-title,
+  .comments-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: -2rem;
+  }

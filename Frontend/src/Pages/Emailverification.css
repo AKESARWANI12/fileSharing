@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+
+.content {
+  max-width: 400px;
+  padding: 20px;
+  border: 4px solid #000000; /* Blue border */
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #000000; /* Green color for title */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #e74c3c; /* Red color for subtitle */
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: calc((100% - 30px) / 6); /* Adjust input width based on container width */
+  height: 50px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 2px solid #820909; /* Orange border for OTP input */
+  border-radius: 5px;
+  margin-right: 6px;
+}
+
+.verify-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #3498db; /* Blue button background */
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resend-btn {
+  background-color: #0e0e0e; /* Yellow button background */
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 auto; /* Centers the button horizontally */
+  display: block; /* Ensures it takes up the full width available */
+}

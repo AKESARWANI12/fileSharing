@@ -1,0 +1,36 @@
+.comments__container {
+    border: 2px solid #333; /* Dark border */
+    padding: 20px;
+    background-color: #f8f8f8; /* Light background color */
+  }
+  
+  .comment-container {
+    margin-bottom: 20px; /* Add spacing between comments */
+  }
+
+  
+
+  .input-text {
+    border: 1px solid #ccc; /* Add a border */
+    padding: 8px; /* Add some padding */
+    outline: none; /* Remove default outline */
+    width: 100%; /* Set the width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  .submit__btn {
+    background-color: blue; /* Set the background color to blue */
+    color: black; /* Set the text color to black */
+    padding: 8px 16px; /* Add some padding */
+    border: none; /* Remove the border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .submit__btn:hover {
+    background-color: darkblue; /* Change background color on hover */
+  }
+  
+  /* Rest of your CSS styles */
+  .comments-heading {
+    color: #333; /* Set the text color to dark */
+    font-size: 1.5rem; /* Set the font size to 1.5rem (adjust as needed) */
+  }

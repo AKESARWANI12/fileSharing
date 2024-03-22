@@ -1,0 +1,15 @@
+.pdf-div {
+    width: 150%;
+    overflow: hidden;
+  }
+  
+  .pdf-container {
+    max-height: 600px; /* Adjust the maximum height as needed */
+    overflow-y: scroll;
+  }
+  
+  .pdf-page {
+    margin: auto;
+    display: block;
+  }
+  

@@ -1,0 +1,69 @@
+/* CSS for the modal */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px; /* Square shaped box */
+    width: 80%;
+    max-width: 400px; /* Adjust as needed for responsiveness */
+    text-align: center; /* Center align content */
+  }
+  
+  /* Close button */
+  .close {
+    color: black; /* Text color black */
+    position: absolute;
+    top: 10px; /* Distance from top */
+    right: 10px; /* Distance from right */
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: blue; /* Change color on hover */
+  }
+  
+  /* Share button */
+  .share-button {
+    background-color: blue; /* Blue background */
+    color: black; /* Text color black */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .share-button:hover {
+    background-color: #0066ff; /* Darker blue on hover */
+  }
+  
+  /* Input area */
+  .input-area {
+    border: 2px solid black; /* Black border */
+    padding: 8px;
+    margin-bottom: 10px; /* Space below input */
+  }
+  
+  /* Enter Email text */
+  .enter-email {
+    font-size: 2rem; /* Four times larger */
+    margin-top: 20px; /* Add space between close button and text */
+  }
+  
+  .table-scroll {
+    max-height: 500px;
+    overflow-y: auto;
+  }

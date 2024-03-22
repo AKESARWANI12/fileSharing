@@ -1,0 +1,8 @@
+ .main{
+  min-height:100vh;
+  display:flex;
+  background-image: url("./background.png"); 
+  background-size: cover;
+  background-position:center;
+  background-color: aqua;
+} 
