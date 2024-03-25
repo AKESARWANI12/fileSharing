@@ -34,10 +34,7 @@ const submitHandler=async()=>{
           "Content-type": "application/json",
         },
       };
-      const { data } = await axios.post("http://localhost:5000/api/user/login",{ email, password },config);
-      // const { data } = await axios.post(
-      //   `${process.env.REACT_APP_BACKEND_URL}/api/user/login`,{ email, password },config);
-    
+      const { data } = await axios.post("https://filesharing-w5du.onrender.com/api/user/login",{ email, password },config);
       toast({
         title: "Login Successful",
         status: "success",
@@ -60,11 +57,9 @@ const submitHandler=async()=>{
       setLoading(false);
     }
 }
-
 const handleClick=()=>{
     setShow(!show);
 }
-
   return (
   <VStack spacing='10px' >
     <FormControl id="email" isRequired>
