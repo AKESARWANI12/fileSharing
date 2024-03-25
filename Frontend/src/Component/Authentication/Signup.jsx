@@ -73,7 +73,7 @@ const Signup = () => {
       setSignIt(data);
     } catch (error) {
       toast({
-        title: "Error Occured!",
+        title: "User already exist!",
          description: error.response.data.message,
         status: "error",
         duration: 5000,
