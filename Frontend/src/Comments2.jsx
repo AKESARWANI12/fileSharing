@@ -12,19 +12,12 @@ const FileDetails = () => {
 // Make a GET request to fetch comments for the specific PDF file
 const fetchData = async (e) => {
     try { 
-    //   console.log("shiv12",pdfId);  
       const config = {
         headers: {
             Authorization: `Bearer ${user.token}`,
         },
     };   
-const response = await axios.get(`http://localhost:5000/api/comments/${pdfId}`,config);
-// const response = await axios.get(
-//     `${process.env.REACT_APP_BACKEND_URL}/api/comments/${pdfId}`,
-//     config
-// );
-
-// console.log("ye hai response comment data",response.data.comments);     
+const response = await axios.get(`https://filesharing-w5du.onrender.com/api/comments/${pdfId}`,config);    
         setComments2(response.data.comments); 
     } catch (error) {   
         console.error('Error fetching comments:', error);
@@ -40,13 +33,7 @@ const handleSubmit = async (event) => {
             };          
           
             // console.log(commentedpdf,commentText)
-            const response =await axios.post('http://localhost:5000/api/comments', {  content: commentText,  filename: commentedpdf }, config);
-            // const response = await axios.post(
-            //     `${process.env.REACT_APP_BACKEND_URL}/api/comments`,
-            //     { content: commentText, filename: commentedpdf },
-            //     config
-            // );
-            
+            const response =await axios.post('https://filesharing-w5du.onrender.com/api/comments', {  content: commentText,  filename: commentedpdf }, config);            
             // Fetch updated comments
             console.log(response.data)
             const pdfObjectId = response.data.pdf_file_id;
@@ -96,20 +83,4 @@ const handleSubmit = async (event) => {
 
 export default FileDetails;
 
-
-
-
-            // const fetchData = async () => {  
-    //     try {
-    //         // Fetch file details
-    //         const fileResponse = await axios.get('/api/file/details'); // Assuming this endpoint returns file details
-    //         setFile(fileResponse.data);
-
-    //         // Fetch comments
-    //         const commentsResponse = await axios.get(`/api/comments?unique_link=${fileResponse.data.unique_link}`);
-    //         setComments(commentsResponse.data);
-    //     } catch (error) {
-    //         console.error('Error fetching data:', error);
-    //     }
-    // };
 
