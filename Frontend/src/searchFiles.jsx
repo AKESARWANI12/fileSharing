@@ -8,7 +8,7 @@ const SearchFiles = () => {
 
     const fetchFiles = async () => {
         try {
-            const response = await axios.get(`/api/files?search_query=${searchQuery}`);
+            const response = await axios.get(`https://filesharing-w5du.onrender.com/api/files?search_query=${searchQuery}`);
             setFiles(response.data.files);
         } catch (error) {
             console.error('Fetch files error:', error);
