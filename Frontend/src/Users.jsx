@@ -18,12 +18,7 @@ const Users = () => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const {data}= await axios.get(`http://localhost:5000/api/user?search=${search}`, config);          
-            // const { data } = await axios.get(
-            //     `${process.env.REACT_APP_BACKEND_URL}/api/user?search=${search}`,
-            //     config
-            // );
-            
+            const {data}= await axios.get(`https://filesharing-w5du.onrender.com/api/user?search=${search}`, config);                      
             setSearchResult(data);
             setLoading(false);
         } catch (error) {
@@ -39,7 +34,6 @@ const Users = () => {
             });
         }
     };
-
     return (
       <div className="container mt-5">
     <h1 className="text-center mb-1" style={{ fontSize: '3rem' }}>🔍 Search Users</h1>
