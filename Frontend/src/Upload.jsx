@@ -5,14 +5,14 @@ import { Box, Button, Input ,Center} from '@chakra-ui/react';
 import axios from "axios";
 import { pdfjs } from 'react-pdf';
 import PdfComp from "./PdfComp.jsx";
-
+import { useToast } from '@chakra-ui/react';
 const Upload = () => {
   const [title,settitle]=useState("");
   const {user}=ChatState();
 const [file,setfile]=useState("");
 const[allImage,setAllImage]=useState(null);
 const[pdfFile,setPdfFile]=useState(null);
-
+const toast=useToast();
   const submitpdf=async (e)=>{
     e.preventDefault();
     const formData=new FormData();
@@ -34,8 +34,13 @@ const[pdfFile,setPdfFile]=useState(null);
   )
 
   if (result.data.status == "ok") {
-     alert("Uploaded Successfully!!!");
-    console.log("uploaded successfully")
+     toast({
+      title: "Uploaded successfully",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    });
   }
   };
 
