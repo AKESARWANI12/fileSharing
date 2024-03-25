@@ -26,17 +26,13 @@ function VerifyEmail() {
       };
     
       const { data } = await axios.post(
-        "http://localhost:5000/api/user",
+        "https://filesharing-w5du.onrender.com/api/user",
         {name,email,password,otp},
         config
       );
-    //   const { data } = await axios.post(
-    //     `${process.env.REACT_APP_BACKEND_URL}/api/user`,
-    //     { name, email, password, otp },
-    //     config
-    // );
+  
+    localStorage.setItem("userInfo", JSON.stringify(data));
     
-       console.log("hanuman1", data);
       navigate("/upload");
     } catch (error) {
       console.log("error",error)
