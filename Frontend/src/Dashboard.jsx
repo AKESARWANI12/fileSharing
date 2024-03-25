@@ -19,9 +19,7 @@ const Dashboard = () => {
 const fetchData = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:5000/api/pdf-files');
-      // const { data } = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/pdf-files`);
-
+      const { data } = await axios.get('https://filesharing-w5du.onrender.com/api/pdf-files');
       setFiles(data.data);
       setLoading(false);
     } catch (error) {
@@ -43,13 +41,7 @@ const fetchData = async () => {
   const shareFile = async () => {
     try {
       // console.log("om",selectedFileId,sharedWithEmail)
-       const response = await axios.post('http://localhost:5000/api/share', { file: selectedFileId, email: sharedWithEmail });
-      // const response = await axios.post(
-      //   `${process.env.REACT_APP_BACKEND_URL}/api/share`,
-      //   { file: selectedFileId, email: sharedWithEmail },
-      //   config
-    // );
-    
+       const response = await axios.post('https://filesharing-w5du.onrender.com/api/share', { file: selectedFileId, email: sharedWithEmail });
       setMessage(response.data.message);
       setShowShareModal(false);
       setSharedWithEmail('');
@@ -59,10 +51,7 @@ const fetchData = async () => {
   };
   const showPdf = (pdf) => {
     setcommentedpdf(pdf)
-    // console.log("check",setcommentedpdf)
       bhezo(`http://localhost:5000/files/${pdf}`);
-    //  bhezo(`${process.env.REACT_APP_BACKEND_URL}/files/${pdf}`);
-
      navigate(`/pdf-viewer/${pdf}`);
 
   };
