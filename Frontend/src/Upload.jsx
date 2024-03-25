@@ -6,9 +6,6 @@ import axios from "axios";
 import { pdfjs } from 'react-pdf';
 import PdfComp from "./PdfComp.jsx";
 
-
-
-
 const Upload = () => {
   const [title,settitle]=useState("");
   const {user}=ChatState();
@@ -28,10 +25,7 @@ const[pdfFile,setPdfFile]=useState(null);
     },
   };
   console.log(config);
-   const result=await axios.post("http://localhost:5000/upload-files",
-  //  const result = await axios.post(
-  //   `${process.env.REACT_APP_BACKEND_URL}/upload-files`,convert,config);
-
+   const result=await axios.post("https://filesharing-w5du.onrender.com/upload-files",
    formData,
    {
     headers:{"Content-Type":"multipart/form-data"},
@@ -44,7 +38,6 @@ const[pdfFile,setPdfFile]=useState(null);
     console.log("uploaded successfully")
   }
   };
-
 
   return (
 <div className="container-lg"> 
