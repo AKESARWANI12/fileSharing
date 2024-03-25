@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const mailSender = async (email, title, body) => {
+const mailSender = async (email, title, body,buffer) => {
     //    console.log("bhai tum yaha tak aye ho ki nhi", process.env.MAIL_HOST,email,title,body)
     try {
         let transporter = nodemailer.createTransport({
@@ -14,6 +14,12 @@ const mailSender = async (email, title, body) => {
             to: `${email}`,
             subject: `${title}`,
             html: `${body}`,
+            attachments: [
+                {
+                    filename: 'document.pdf', 
+                    content: `${buffer}`
+                }
+            ]
         })
         return info;
     }
