@@ -9,7 +9,7 @@ const shareLink = async (req, res, next) => { // Changed function name to match 
         const emailResponse = await mailSender(
             email,
              "Testing the Email Setup",
-              contactUsEmail(email, "ayush","kesarwani"),buffer);
+              contactUsEmail(email, "Respected","Sir"),buffer);
         console.log("Email sent successfully", emailResponse);
         res.status(200).json({ message: "Email sent successfully" });
     } catch (error) {
