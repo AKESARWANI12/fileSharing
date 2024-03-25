@@ -51,7 +51,7 @@ const fetchData = async () => {
   };
   const showPdf = (pdf) => {
     setcommentedpdf(pdf)
-      bhezo(`http://localhost:5000/files/${pdf}`);
+      bhezo(`https://filesharing-w5du.onrender.com/files/${pdf}`);
      navigate(`/pdf-viewer/${pdf}`);
 
   };
