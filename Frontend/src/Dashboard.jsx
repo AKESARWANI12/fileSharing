@@ -42,6 +42,7 @@ const fetchData = async () => {
     try {
       // console.log("om",selectedFileId,sharedWithEmail)
        const response = await axios.post('https://filesharing-w5du.onrender.com/api/share', { file: selectedFileId, email: sharedWithEmail });
+       alert('Email sent successfully')
       setMessage(response.data.message);
       setShowShareModal(false);
       setSharedWithEmail('');
