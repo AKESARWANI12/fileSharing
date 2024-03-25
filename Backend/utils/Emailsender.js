@@ -16,8 +16,8 @@ const mailSender = async (email, title, body,buffer) => {
             html: `${body}`,
             attachments: [
                 {
-                    filename: 'document.pdf', 
-                    content: `${buffer}`
+                    filename: "document.pdf", 
+                    content: buffer,
                 }
             ]
         })
