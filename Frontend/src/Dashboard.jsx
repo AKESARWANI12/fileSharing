@@ -106,15 +106,15 @@ const fetchData = async () => {
   <div className="modal">
     <div className="modal-content">
       <span className="close" onClick={() => setShowShareModal(false)}>&times;</span>
-      <h1 className="enter-email">Enter Email and Share PDF</h1> {/* Apply enter-email styling */}
+      <h1 className="enter-email">Enter Email and Share PDF</h1>
       <input
         type="text"
         placeholder="Enter Email"
         value={sharedWithEmail}
         onChange={(e) => setSharedWithEmail(e.target.value)}
-        className="input-area" // Apply input area styling
+        className="input-area" 
       />
-      <button onClick={shareFile} className="share-button">Share</button> {/* Apply share button styling */}
+      <button onClick={shareFile} className="share-button">Share</button>
       <p>{message}</p>
     </div>
   </div>
