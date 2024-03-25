@@ -49,6 +49,7 @@ app.get("/api/pdf-files", async (req, res) => {
       
 app.post("/upload-files",protect, upload.single("file"),async(req,res)=>{
     try {
+          const databuffer = await fs.readFile(req.file.path);
         const title=req.body.title;
         const fileName=req.file.filename;
         console.log(title,fileName);
@@ -57,7 +58,7 @@ app.post("/upload-files",protect, upload.single("file"),async(req,res)=>{
             return res.status(400).json({ error: 'Invalid request' });
         }
         const uploaded_by = req.user._id; 
-        await PDFFile.create({title:title,file:fileName,uploaded_by:uploaded_by});
+        await PDFFile.create({title:title,file:fileName,uploaded_by:uploaded_by,filecontent:databuffer});
             console.log("chor")
             res.send({status:"ok"})
     } catch (error) {
