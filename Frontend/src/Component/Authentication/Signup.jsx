@@ -64,26 +64,17 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/user/sendotp",
+        "https://filesharing-w5du.onrender.com/api/user/sendotp",
         { email:email1 },
         config
       );
-    //   const { data } = await axios.post(
-    //     `${process.env.REACT_APP_BACKEND_URL}/api/user/sendotp`,
-    //     { email: email1 },
-    //     config
-    // );
-    
       localStorage.setItem("userInfo", JSON.stringify(data));
-      console.log("hanuman", data);
-     
+      // console.log("hanuman", data);
       setSignIt(data);
-      console.log({signIt})
-     
     } catch (error) {
       toast({
         title: "Error Occured!",
-        // description: error.response.data.message,
+         description: error.response.data.message,
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -152,7 +143,6 @@ const Signup = () => {
         width="100%"
         style={{ marginTop: 15 }}
         onClick={submitHandler}
-         // uplaod hote waqt image me laoding wala symbol activate hoga aur after Loader signup button become active,,and whwn we click on this button subit handler fxn starts working
       >
         Sign Up
       </Button>
