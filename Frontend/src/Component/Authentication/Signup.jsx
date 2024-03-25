@@ -18,7 +18,7 @@ const Signup = () => {
    const[name1,setName1]=useState();
    const[email1,setEmail1]=useState();
   const[password1,setPassword1]=useState();
-  const [confirmpassword1, setConfirmPassword1] = useState(123);
+  const [confirmpassword1, setConfirmPassword1] = useState();
   const [signIt,setSignIt]=useState([]);
   const navigate = useNavigate();
 
