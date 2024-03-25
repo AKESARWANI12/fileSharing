@@ -20,7 +20,7 @@ app.use("/files", express.static("files"));
 app.use("/api/user",userRoutes);
 app.use('/api/comments', commentRoutes1);
 app.use("/api",shareRoutes);
-
+const fs = require("fs").promises;
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
