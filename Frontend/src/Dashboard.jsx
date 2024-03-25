@@ -84,7 +84,7 @@ const fetchData = async () => {
                   <td>{filex.uploaded_at}</td>
                   <td>
                     <button
-                      onClick={() => handleShare(filex.file)}
+                      onClick={() => handleShare(filex._id)}
                       type="button"
                       className="btn btn-primary"
                     >
